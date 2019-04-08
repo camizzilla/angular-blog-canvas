@@ -44,7 +44,8 @@
             </div>
           </div>
 
-          <button class="button is-danger is-large" (click)="getValueNewsletter()">Invia</button>
+          <button class="button is-danger is-large" [disabled]="newsletterForm.invalid"
+            (click)="getValueNewsletter()">Invia</button>
 
         </form>
 
