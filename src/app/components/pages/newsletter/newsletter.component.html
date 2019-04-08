@@ -1,0 +1,56 @@
+<div class="hero-body">
+  <div class="container has-text-centered">
+    <div class="columns is-vcentered">
+      <div class="column is-5">
+        <figure class="image is-4by3">
+          <img src="https://picsum.photos/800/600/?random" alt="Description">
+        </figure>
+      </div>
+      <div class="column is-6 is-offset-1">
+        <h1 class="title is-2">
+          Superhero Scaffolding
+        </h1>
+        <h2 class="subtitle is-4">
+          Let this cover page describe a product or service.
+        </h2>
+        <br>
+
+        <form id="newsletter" [formGroup]="newsletterForm">
+
+          <!-- name -->
+          <div class="field">
+            <div class="control has-icons-left has-icons-right">
+              <input type="text" name="name" class="input is-medium" placeholder="Nome" formControlName="name">
+              <span class="icon is-left">
+                <i class="fas fa-user-astronaut"></i>
+              </span>
+              <span class="icon is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+            <span [hidden]="newsletterForm.controls.name.valid || newsletterForm.controls.name.pristine">Il titolo è
+              obbligatorio e non può superare i 30 caratteri!</span>
+          </div>
+          <!-- email -->
+          <div class="field">
+            <div class="control has-icons-left has-icons-right">
+              <input type="email" name="email" class="input is-medium" placeholder="Email" formControlName="email">
+              <span class="icon is-left">
+                <i class="far fa-envelope"></i>
+              </span>
+              <span class="icon is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+          </div>
+
+          <button class="button is-danger is-large" (click)="getValueNewsletter()">Invia</button>
+
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

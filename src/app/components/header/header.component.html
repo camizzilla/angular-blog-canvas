@@ -1,0 +1,55 @@
+<!-- START NAV -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../">
+        Roberto Cazzaniga
+      </a>
+      <span class="navbar-burger burger" data-target="navbarMenu" (click)="toggleNavbarMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <div id="navbarMenu" class="navbar-menu" [ngClass]="{'is-active': classNavbarMenu}">
+      <div class="navbar-end">
+        <a class="navbar-item is-active">
+          Home
+        </a>
+        <a class="navbar-item">
+          about
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Archivio
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Platform
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Avventure grafiche
+            </a>
+            <a class="navbar-item">
+              Rpg
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--#navbarMenu-->
+    <div class="navbar-item is-flex-touch social">
+      <a class="navbar-item">
+        <i class="fab fa-lg fa-facebook"></i>
+      </a>
+      <a class="navbar-item">
+        <i class="fab fa-lg fa-instagram"></i>
+      </a>
+      <a class="navbar-item">
+        <i class="fab fa-lg fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- END NAV -->
