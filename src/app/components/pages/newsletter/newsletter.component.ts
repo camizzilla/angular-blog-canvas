@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class NewsletterComponent implements OnInit {
 
   newsletterForm: FormGroup;
+  submitted: boolean = false;
 
   constructor(fb: FormBuilder) {
     this.newsletterForm = fb.group({
@@ -18,18 +19,31 @@ export class NewsletterComponent implements OnInit {
           Validators.maxLength(30)
         ]
       ],
-      email: ["",
-        Validators.required
-      ]
+      email: ['',
+        [
+          Validators.required,
+          Validators.email
+        ]
+      ],
     });
   }
 
   ngOnInit() {
   }
 
-  getValueNewsletter() {
-    console.log(this.newsletterForm.value);
-    console.log(this.newsletterForm.controls.name.value);
+  get f() {
+    return this.newsletterForm.controls;
+  }
+
+  onSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.newsletterForm.invalid) {
+      return;
+    }
+
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.newsletterForm.value))
   }
 
 }
