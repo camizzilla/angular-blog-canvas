@@ -1,8 +1,341 @@
-<section class="hero is-info is-medium is-bold">
+<!-- routes will be rendered here -->
+<!-- <router-outlet></router-outlet> -->
+<section class="hero is-primary">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed eiusmod tempor incididunt ut
-        labore et dolore magna aliqua</h1>
+    <div class="container">
+      <h1 class="title">
+        Platform game: cosa sono?
+      </h1>
+      <h2 class="subtitle">
+        Un introduzione generale su cosa sono i platoform game e i vari generi
+      </h2>
     </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container">
+    <div class="column is-8 is-offset-2">
+      <div class="content is-medium">
+        <p>Ciao a tutti!</p>
+        <p>
+          In questa serie di articoli impareremo, insieme, a
+          <span class="has-text-weight-bold">sviluppare un platform game 2d</span>, il genere più amato nell’universo
+          dei videogiochi.
+        </p>
+        <p>
+          Questa popolarità è sicuramente data dalla meccanica di gioco,
+          semplice ed immediata, tanto che, potremmo definirli in maniera
+          semplicistica, quei videogame dove
+          <span class="has-text-weight-bold">“bisogna saltare su delle piattaforme”</span>.
+        </p>
+        <p>
+          Oltre a questo, un altro fattore che li rende così amati, è lo
+          sconfinato catalogo di titoli esistenti, che accontenta tutti, dai
+          neofiti ai più esperti.
+        </p>
+        <p>
+          Se siete già degli esperti o se non vedete l’ora di imparare a creare
+          il vostro platform 2d potete saltare direttamente al prossimo articolo
+          <a href="">[Cosa serve]</a>, diversamente, fatemi compagnia e
+          continuate a leggere...
+        </p>
+        <section class="paragraph">
+          <h2>Gameplay</h2>
+          <p>Il gameplay di base è abbastanza semplice.</p>
+          <p>Il protagonista dovrà perseguire un obiettivo.</p>
+          <p>
+            <span class="has-text-weight-bold">Gli obiettivi possono essere diversi </span>, dal raccogliere delle
+            chiavi, ad uccidere tutti i nemici o al
+            dover raggiungere delle aree ben precise
+            <span class="has-text-weight-bold">per avanzare di livello in livello, il tutto saltando da una
+              piattaforma all’altra</span>
+            che anche in questo caso potranno non essere tutte uguali; Ne
+            esistono di fisse, mobili o addirittura a scomparsa e il
+            protagonista dovrà sempre stare molto attento a non cadere nel
+            vuoto.
+          </p>
+          <p>
+            Ovviamente non sarà così semplice, ogni livello sottoporrà i propri
+            <span class="has-text-weight-bold">ostacoli</span> che di volta in
+            volta diventeranno
+            <span class="has-text-weight-bold">sempre più difficili</span> da
+            affrontare.
+          </p>
+        </section>
+        <hr />
+        <section class="paragraph">
+          <h2>Generi</h2>
+          <p>
+            Ci sono vari generi di gameplay. Vediamone insieme alcuni tra i più
+            importanti:
+          </p>
+          <ul>
+            <li class="has-text-left">
+              <h4>Schermata fissa:</h4>
+              <p>
+                I re dei cabinati anni ‘80. Lo dice la parola stessa, “<span class="is-italic">schermata fissa</span>”
+                ovvero livelli che
+                <span class="has-text-weight-bold">si svolgono su un’unica schermata</span>
+                e che permettono di passare al livello successivo solo a fronte
+                dell’uccisione di tutti i nemici che infestano il livello stesso
+                oppure raccogliendo tutti gli oggetti presenti.
+              </p>
+              <p>
+                <span class="has-text-weight-bold">Il primo gioco</span>, non
+                temporalmente, ma
+                <span class="has-text-weight-bold"> per importanza </span> è
+                “<span class="is-italic">Donkey Kong</span>” dove il solito
+                Mario, che al tempo non si chiamava ancora così, ma Jumpman,
+                doveva salvare la fidanzata dallo scimmione Donkey Kong il quale
+                lo ostacolava lanciandogli dei barili da un’impalcatura.
+              </p>
+              <figure class="image">
+                <img src="https://image.ibb.co/jfg18z/donkey-kong.jpg" alt="Donkey Kong" />
+                <figcaption class="is-size-6">Donkey Kong</figcaption>
+              </figure>
+              <p>
+                Altri capolavori come questo sono :
+                <span class="is-italic">Mario Bros</span> da non confondere con
+                Super Mario Bros che fa parte della categoria sottostante di cui
+                ti parlerò tra poco, o ancora,
+                <span class="is-italic">Bubble Bobble</span>, dove ci sono due
+                fratelli, i quali vengono trasformati in draghetti sparabolle,
+                che devono liberare le rispettive fidanzate ( personalmente il
+                mio preferito del genere, quanti soldi ho buttato in quel
+                cabinato!!! ).
+              </p>
+              <figure class="image">
+                <img src="https://image.ibb.co/nzkToz/mario-bros.jpg" alt="Mario Bros." />
+                <figcaption class="is-size-6">Mario Bros.</figcaption>
+                <img src="https://image.ibb.co/dSB18z/bubble-booble.jpg" alt="Bubble Bobble" />
+                <figcaption class="is-size-6">Bubble Bobble</figcaption>
+              </figure>
+              <p>
+                Ti svelo un segreto, con il mio corso
+                <span class="has-text-weight-bold">imparerai proprio a realizzare un platform</span>
+                di questo genere, ovvero,
+                <span class="has-text-weight-bold">a schermata fissa!</span>
+                Sssssssshhhhhhh io non ti ho detto niente eh!
+              </p>
+            </li>
+            <br />
+            <li class="has-text-left">
+              <h4>Scorrimento orizzontale:</h4>
+              <p>
+                il genere più diffuso, dove
+                <span class="has-text-weight-bold">il protagonista</span>
+                andando a destra o a sinistra dello schermo
+                <span class="has-text-weight-bold">fa “scrollare”</span>
+                quest’ultimo nella direzione presa. Quindi, il livello viene
+                visualizzato
+                <span class="has-text-weight-bold">man mano che il personaggio si sposta</span>.
+              </p>
+              <p>
+                <span class="has-text-weight-bold">Il caposaldo</span> di questa
+                categoria è sicuramente “<span class="is-italic">Super Mario Bros.</span>”, dove i famosi idraulici
+                baffuti,
+                <span class="is-italic">Mario</span> e
+                <span class="is-italic">Luigi</span>, devono superare vari
+                livelli per liberare la principessa
+                <span class="is-italic">Peach</span> dal perfido
+                <span class="is-italic">Bowser</span>.
+              </p>
+              <figure class="image">
+                <img src="https://image.ibb.co/bDUJw8/super-mario-bros.jpg" alt="Super Mario Bros." />
+                <figcaption class="is-size-6">Super Mario Bros.</figcaption>
+              </figure>
+              <p>
+                <span class="is-italic">Sonic the Hedgehog</span>,
+                <span class="is-italic">Rayman</span> e il più recente
+                <span class="is-italic">Super Meat Boy</span> sono solo alcuni
+                dei titoli validi di una lista lunghissima di questa categoria.
+              </p>
+              <figure class="image">
+                <img src="https://i.ibb.co/hmjSj2x/Sonic-625x350.jpg" alt="Sonic the Hedgehog" />
+                <figcaption class="is-size-6">Sonic the Hedgehog</figcaption>
+                <img src="https://i.ibb.co/RYVk028/raynman.png" alt="Rayman" />
+                <figcaption class="is-size-6">Rayman</figcaption>
+              </figure>
+              <p>
+                Ti svelo un segreto, con il mio corso
+                <span class="has-text-weight-bold">imparerai proprio a realizzare un platform</span>
+                di questo genere, ovvero,
+                <span class="has-text-weight-bold">a schermata fissa!</span>
+                Sssssssshhhhhhh io non ti ho detto niente eh!
+              </p>
+            </li>
+            <br />
+            <li class="has-text-left">
+              <h4>Run-and-gun:</h4>
+              <p>
+                Corri e spara, un nome che spiega come le peculiarità di questo
+                genere siano, il gioco
+                <span class="has-text-weight-bold">frenetico</span> e il
+                <span class="has-text-weight-bold">farsi strada </span>tra le
+                orde di nemici a
+                <span class="has-text-weight-bold">suon di colpi</span>. Spesso
+                e volentieri sono ambientati in un contesto militare, dove
+                bisogna interpretare il Rambo di turno e sbaragliare i vari
+                nemici che si incontrano sul cammino e che non ci risparmieranno
+                chili di proiettili.
+              </p>
+              <p>
+                Due giochi che io ho adorato di questo genere, sono
+                <span class="is-italic">Contra</span> e
+                <span class="is-italic">Metal Slug</span>, in entrambi i casi si
+                interpreta un militare che nel primo gioco è l’ultima speranza
+                dell’umanità ed è stato mandato in missione per sconfiggere
+                l’alieno che ha conquistato la terra e nel secondo gioco invece,
+                deve sconfiggere le cellule terroristiche che minacciano la pace
+                del mondo.
+              </p>
+              <figure class="image">
+                <img src="https://image.ibb.co/gsP7do/contra.jpg" alt="Contra" />
+                <figcaption class="is-size-6">Contra</figcaption>
+                <img src="https://image.ibb.co/bBB1io/metal-slug.jpg" alt="Metal Slug" />
+                <figcaption class="is-size-6">Metal Slug</figcaption>
+              </figure>
+            </li>
+            <br />
+            <li class="has-text-left">
+              <h4>Cinematic:</h4>
+              <p>
+                questo genere è in assoluto il mio preferito perché
+                <span class="has-text-weight-bold">mescola le meccaniche di tutti i generi</span>
+                ed in più
+                <span class="has-text-weight-bold">ha una sua storia “cinematografica”</span>. Non troviamo più quindi,
+                la classica storiella della donzella
+                rapita da salvare usata nella maggior parte dei platform, ma una
+                trama ben strutturata che evolve nel corso del gioco. In questo
+                caso specifico abbiamo
+                <span class="has-text-weight-bold">un gameplay a servizio della storia e non il contrario</span>.
+              </p>
+              <p>Facciamo qualche esempio.</p>
+              <p>
+                In <span class="is-italic">Another World</span>, un genio della
+                fisica, viene catapultato in un mondo alieno dopo un esperimento
+                su un acceleratore di particelle da qui, inizia la sua avventura
+                per la sopravvivenza.
+              </p>
+              <figure class="image">
+                <img src="https://image.ibb.co/kpJuDo/another-world.jpg" alt="Another World" />
+                <figcaption class="is-size-6">Another World</figcaption>
+              </figure>
+              <p>
+                Mentre in
+                <span class="is-italic">Flashback: The Quest for Identity</span>
+                un uomo, in un futuro lontano, si ritrova braccato e senza
+                memoria. In queste condizioni, dovrà farsi strada tra mille
+                pericoli per ricostruire le vicende che lo hanno portato in
+                quella situazione.
+              </p>
+              <figure class="image">
+                <img src="https://image.ibb.co/bV4CzT/flashback.jpg" alt="Flashback: The Quest for Identity" />
+                <figcaption class="is-size-6">
+                  Flashback: The Quest for Identity
+                </figcaption>
+              </figure>
+
+              <p>
+                Una menzione speciale per “<span class="is-italic">The Eternal Castle [Remasteres]</span>”, un gioco
+                moderno dalla grafica antica, veramente
+                interessante!!!
+              </p>
+              <figure class="image">
+                <img src="https://i.ibb.co/ZYB8pQJ/Eternal-Castle.jpg" alt="The Eternal Castle [Remasteres]" />
+                <figcaption class="is-size-6">
+                  The Eternal Castle [Remasteres]
+                </figcaption>
+              </figure>
+            </li>
+            <br />
+            <li class="has-text-left">
+              <h4>Puzzle game:</h4>
+              <p>
+                Non basta solo l’abilità per questo genere, si necessita anche
+                dell’ingegno per
+                <span class="has-text-weight-bold">risolvere i vari enigmi</span>
+                che vengono proposti per
+                <span class="has-text-weight-bold">superare i vari livelli</span>.
+              </p>
+              <p>
+                “<span class="is-italic">Limbo</span>” è un ottimo esempio del
+                genere, catapultato in un mondo oscuro e pieno di pericoli, il
+                povero protagonista, un ragazzino che cerca la sorella dispersa,
+                dovrà risolvere gli enigmi ambientali che gli verranno man mano
+                proposti. Un altro gioco che ha riportato di moda questo genere
+                è sicuramente “<span class="is-italic">Braid”</span>, dove il
+                protagonista per salvare la principessa rapita ( che fantasia )
+                deve superare vari rompicapi grazie anche al suo potere di
+                tornare indietro nel tempo.
+              </p>
+              <figure class="image">
+                <img src="https://image.ibb.co/heZeeT/limbo.jpg" alt="Limbo" />
+                <figcaption class="is-size-6">Limbo</figcaption>
+                <img src="https://image.ibb.co/h0K1to/braid.jpg" alt="Braid" />
+                <figcaption class="is-size-6">Braid</figcaption>
+              </figure>
+            </li>
+            <li class="has-text-left">
+              <h4>Metroidvania:</h4>
+              <p>
+                Prende il nome dalla fusione di due pietre miliari del genere
+                come “<span class="is-italic">Metroid”</span> e “<span class="is-italic">Castalvania</span>”, che sono
+                stati i primi ad introdurre delle meccaniche di
+                gioco un po’ particolari..
+                <span class="has-text-weight-bold">La mappa non è lineare</span>, quindi il giocatore può scegliere tra
+                le varie biforcazioni
+                che il gioco propone e soprattutto può ripercorrere punti già
+                visitati. Un’altra peculiarità, di questo genere, è che
+                <span class="has-text-weight-bold">certe aree sono precluse e possono essere sbloccate solo dopo
+                  aver acquisito dei speciali power Up</span>, come ad esempio degli stivali speciali permettono un
+                salto
+                maggiore per raggiungere delle piattaforme diversamente
+                irraggiungibili, oppure un’arma più potente che permetterà di
+                sconfiggere dei nemici potenti o di abbattere muri altrimenti
+                indistruttibili
+              </p>
+              <figure class="image">
+                <img src="https://i.ibb.co/X3x5tBY/metroid.jpg" alt="Metroid" />
+                <figcaption class="is-size-6">Metroid</figcaption>
+                <img src="https://image.ibb.co/nHGWto/castlevania.jpg" alt="Castalvania" />
+                <figcaption class="is-size-6">Castalvania</figcaption>
+              </figure>
+              <p>
+                Metroid e Castelvania sono dei giochi molto belli, ma di una
+                difficoltà estrema, pertanto,se volete cimentarvi con questo
+                genere vi consiglio
+                <span class="is-italic">Hollow Knight</span> e
+                <span class="is-italic">Messenger</span>.
+              </p>
+              <figure class="image">
+                <img src="https://i.ibb.co/JKZJLwL/hollow-knight.jpg" alt="Hollow Knight" />
+                <figcaption class="is-size-6">Hollow Knight</figcaption>
+                <img src="https://i.ibb.co/5Lfms0R/the-messenger.jpg" alt="Messenger" />
+                <figcaption class="is-size-6">Messenger</figcaption>
+              </figure>
+            </li>
+          </ul>
+          <hr />
+          <p>
+            <span class="has-text-weight-bold">I platform si prestano bene a fusioni con altri generi</span>
+            quindi ce ne sarebbero molti altri come platform 3d (in prima e in
+            terza persona),isometrici, cooperativi, con contaminazioni rpg, ecc
+            ma non mi sembra il caso di citarli tutti, anche perchè molto
+            probabilmente non ne conoscerei abbastanza. Detto questo però, spero
+            di averti dato un quadro generale del fantastico mondo dei platform.
+          </p>
+          <p>
+            <span class="has-text-weight-bold">Per eventuali suggerimenti correzioni o semplicemente se vi
+              sentite soli e volete fare due chiacchiere, questi sono i miei
+              contatti</span>.
+          </p>
+        </section>
+      </div>
+    </div>
+    <!-- column is-8 is-offset-2 -->
+  </div>
+  <!-- container -->
+</section>
+<!-- section -->
