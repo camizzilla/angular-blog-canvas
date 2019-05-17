@@ -8,12 +8,33 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { HighlightModule } from 'ngx-highlightjs';
+
+import xml from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+import typescript from 'highlight.js/lib/languages/typescript';
+import javascript from 'highlight.js/lib/languages/javascript';
+
 import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { NewsletterComponent } from './components/pages/newsletter/newsletter.component';
-import { CanvasComponent } from './components/canvas/canvas.component';
 import { IntroComponent } from './components/blog/platform/single-screen/intro/intro.component';
 import { PlatformComponent } from './components/blog/platform/platform.component';
+import { CosaServeComponent } from './components/blog/platform/single-screen/cosa-serve/cosa-serve.component';
+import { CanvasBaseComponent } from './components/blog/platform/single-screen/canvas-base/canvas-base.component';
+
+/** 
+ * Import every language you wish to highlight here
+ * NOTE: The name of each language must match the file name its imported from
+ */
+export function hljsLanguages() {
+  return [
+    { name: 'typescript', func: typescript },
+    { name: 'javascript', func: javascript },
+    { name: 'css', func: css },
+    { name: 'xml', func: xml }
+  ];
+}
 
 @NgModule({
   declarations: [
@@ -23,14 +44,16 @@ import { PlatformComponent } from './components/blog/platform/platform.component
     HomeComponent,
     AboutComponent,
     NewsletterComponent,
-    CanvasComponent,
     IntroComponent,
-    PlatformComponent
+    PlatformComponent,
+    CosaServeComponent,
+    CanvasBaseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightModule.forRoot({ languages: hljsLanguages })
   ],
   providers: [],
   bootstrap: [AppComponent]

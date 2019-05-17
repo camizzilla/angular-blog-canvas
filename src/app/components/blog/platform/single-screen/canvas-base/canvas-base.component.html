@@ -1,0 +1,90 @@
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Platform game: Canvas
+      </h1>
+      <h2 class="subtitle">
+        Gli strumenti che ci serviranno per creare il nostro platform game
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="column is-8 is-offset-2">
+      <div class="content is-medium">
+        <p>Iniziamo strutturando il nostro progetto, creando i file html, css e js con le impostazioni base.</p>
+        <p>Potremmo mettere tutto in un unico file html, ma è sempre meglio tenerli separati, così che se il progetto
+          dovesse
+          allargarsi non sorgano problemi di leggibilità e debugging.</p>
+        <section class="paragraph">
+          <h2>HTML</h2>
+
+          <pre><code [highlight]="htmlCode"></code></pre>
+
+          <p>Creiamo il file index.html che ha una sua struttura base, l’unica novità è il tag &lt;canvas&gt; che è la
+            nostra
+            “tela digitale” dove andremo a dipingere il nostro capolavoro.</p>
+
+          <p>“Tela? Ma cosa siamo pittori?” No, non sono impazzito, o per lo meno, non del tutto.</p>
+
+          <p>Ho parlato di tela digitale perché il canvas ( che in inglese significa Tela ) è un elemento html che ci
+            permetterà
+            di disegnare e gestire il nostro gioco interamente con Javascript.</p>
+
+          <p>Il canvas è nato per sostituire una tecnologia, “Adobe Flash”, un programma di terze parti che serviva per
+            la
+            gestione di video e giochi vettoriali, aveva un notevole successo per le tante animazioni che conteneva al
+            suo
+            interno,ma, aveva seri problemi di sicurezza quindi si è deciso di rimpiazzarlo con un elemento html nativo.
+          </p>
+
+          <p>Dopo questa postilla, torniamo a noi, dunque quello che vedete nel file Index è tutto l’html che ci serve
+            per il
+            nostro progetto: un tag &lt;canvas&gt; con identificativo ( Id ) per catturarlo con javascript. con tanta
+            fantasia, lo
+            chiameremo “myCanvas”.</p>
+        </section>
+        <br>
+        <section class="paragraph">
+          <h2>CSS</h2>
+          <p>Dopo aver impostato la struttura del nostro progetto, dobbiamo dedicarci allo stile e per farlo, dobbiamo
+            creare un
+            file style.css</p>
+          <pre><code [highlight]="cssCode"></code></pre>
+          <p>Nel body abbiamo aggiunto il modulo flaxbox, “display: flex;“ poi, abbiamo impostato il layout, mettendo il
+            canvas al
+            centro ,”align-items: center;“e “justify-content: center;“ successivamente abbiamo dato un’altezza, una
+            larghezza e
+            uno spessore, diversamente , non si vedrebbe a video.</p>
+          <p>E questo, è tutto ciò che ci serve per il caso.</p>
+          <section class="paragraph">
+            <h2>JS</h2>
+            <p>Ultimo, ma non per ordine di importanza, è il file main.js che, creeremo ma per adesso lasceremo vuoto</p>
+            <p>Se siete tipi curiosi e impazienti e volete controllare se funziona potete aggiungere il comando
+              “console.log (‘Ciao,
+              vengo letto correttamente’), il quale, visualizza una scritta sulla console
+              perché andremo a popolare a partire dal prossimo articolo [nome articolo] (questa frase non la capisco)
+            </p>
+          </section>
+          <br>
+          
+          <br>
+          <h2>COME FUNZIONA IL CANVAS?</h2>
+          <p>Bella domanda, bravi!</p>
+          <p>Analizziamo come funziona il canvas, così da capirlo e padroneggiarlo, visto che sarà un tassello
+            fondamentale per
+            quasi tutti i giochi che andremo a creare.</p>
+          <p>Dobbiamo immaginarci il canvas come una griglia di pixel che parte dal punto di origine O e si sviluppa
+            sull’asse
+            delle X in larghezza e sull’asse delle Y in lunghezza.</p>
+        </section>
+      </div>
+    </div>
+    <!-- column is-8 is-offset-2 -->
+  </div>
+  <!-- container -->
+</section>
+<!-- section -->
+

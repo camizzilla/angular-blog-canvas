@@ -6,6 +6,8 @@ import { NewsletterComponent } from './components/pages/newsletter/newsletter.co
 
 import { PlatformComponent } from './components/blog/platform/platform.component';
 import { IntroComponent } from './components/blog/platform/single-screen/intro/intro.component';
+import { CosaServeComponent } from './components/blog/platform/single-screen/cosa-serve/cosa-serve.component';
+import { CanvasBaseComponent } from './components/blog/platform/single-screen/canvas-base/canvas-base.component';
 
 import { from } from 'rxjs';
 
@@ -26,13 +28,21 @@ const routes: Routes = [
   {
     path: 'platform',
     component: PlatformComponent,
-    children: [
-      {
-        path: 'intro',
-        component: IntroComponent
-      }
-    ]
+    children: []
+  },
+  {
+    path: 'platform/intro',
+    component: IntroComponent
+  },
+  {
+    path: 'platform/cosa-serve',
+    component: CosaServeComponent
+  },
+  {
+    path: 'platform/canvas',
+    component: CanvasBaseComponent
   }
+
 ];
 
 @NgModule({
