@@ -2,10 +2,10 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        Platform game: Canvas
+        Platform game: inizializziamo
       </h1>
       <h2 class="subtitle">
-        Gli strumenti che ci serviranno per creare il nostro platform game
+        Prepariamo il canvas con tutti metodi che ci servono
       </h2>
     </div>
   </div>
@@ -14,44 +14,36 @@
   <div class="container">
     <div class="column is-8 is-offset-2">
       <div class="content is-medium">
-        <p>Iniziamo strutturando il nostro progetto, creando i file html, css e js con le impostazioni base.</p>
-        <p>Potremmo mettere tutto in un unico file html, ma è sempre meglio tenerli separati, così che se il progetto
-          dovesse
-          allargarsi non sorgano problemi di leggibilità e debugging.</p>
+        <p> Iniziamo inizializziando ( ma che gioco di parole vi ho tirato fuori? ) il canvas.</p>
+
         <section class="paragraph">
-          <h2>HTML</h2>
+          <h2>[paragrafo]</h2>
 
-          <pre><code [highlight]="htmlCode"></code></pre>
+          <p>Apriamo il file main.js che abbiamo creato nell’articolo precedente [nome dell’articolo] e iniziamo a
+            scrivere il nostro codice.</p>
+          <pre><code [highlight]="mainCode"></code></pre>
 
-          <p>Creiamo il file index.html che ha una sua struttura base, l’unica novità è il tag &lt;canvas&gt; che è la
-            nostra
-            “tela digitale” dove andremo a dipingere il nostro capolavoro.</p>
+          <p>Questo è il codice base che inizializza. Lo useremo quando avremo a che fare con il canvas. dettaglio.</p>
 
-          <p>“Tela? Ma cosa siamo pittori?” No, non sono impazzito, o per lo meno, non del tutto.</p>
+          <p>Abbiamo catturato l’elemento &lt;canvas&gt; grazie al comando javascript document.querySelector("#canvas");
+            tramite il suo identificativo “#canvas” e lo abbiamo salvato nella variabile canvas.</p>
 
-          <p>Ho parlato di tela digitale perché il canvas ( che in inglese significa Tela ) è un elemento html che ci
-            permetterà
-            di disegnare e gestire il nostro gioco interamente con Javascript.</p>
+          <p>Abbiamo assegnato l’altezza e la larghezza al canvas grazie alle proprietà width e height.</p>
 
-          <p>Il canvas è nato per sostituire una tecnologia, “Adobe Flash”, un programma di terze parti che serviva per
-            la
-            gestione di video e giochi vettoriali, aveva un notevole successo per le tante animazioni che conteneva al
-            suo
-            interno,ma, aveva seri problemi di sicurezza quindi si è deciso di rimpiazzarlo con un elemento html nativo.
-          </p>
+          <p>Se il canvas è la tela, la variabile context è la nostra scatola degli attrezzi, dove custodiremo gli
+            strumenti per dipingere.</p>
 
-          <p>Dopo questa postilla, torniamo a noi, dunque quello che vedete nel file Index è tutto l’html che ci serve
-            per il
-            nostro progetto: un tag &lt;canvas&gt; con identificativo ( Id ) per catturarlo con javascript. con tanta
-            fantasia, lo
-            chiameremo “myCanvas”.</p>
+          <p>Con il metodo getContext abbiamo specificato il contesto con il quale lavorare, nel nostro caso è il ‘2d’ e
+            abbiamo preso quindi i giusti attrezzi per lavorare su una tela bidimensionale. </p>
+          <p>Se al posto del contesto “2d”, avessimo specificato “webgl”, ora lavoreremo con dei metodi per il “3d”.</p>
+          <p>Per capire meglio, potremmo paragonare il 2d alla pittura, dove nella variabile context, ho vari strumenti
+            per dipingere come i pennelli e la tavolozza. Mentre il webgl, potremmo paragonarlo alla scultura per la
+            quale servirebbero attrezzi diversi come, il martello e lo scalpello.</p>
         </section>
         <br>
         <section class="paragraph">
-          <h2>CSS</h2>
-          <p>Dopo aver impostato la struttura del nostro progetto, dobbiamo dedicarci allo stile e per farlo, dobbiamo
-            creare un
-            file style.css</p>
+          <h2>[paragrafo]</h2>
+          <p>Iniziamo a prendere confidenza con alcuni metodi del context creando una rudimentale presentazione.</p>
           <pre><code [highlight]="cssCode"></code></pre>
           <p>Nel body abbiamo aggiunto il modulo flaxbox, “display: flex;“ poi, abbiamo impostato il layout, mettendo il
             canvas al

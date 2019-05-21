@@ -8,6 +8,7 @@ import { PlatformComponent } from './components/blog/platform/platform.component
 import { IntroComponent } from './components/blog/platform/single-screen/intro/intro.component';
 import { CosaServeComponent } from './components/blog/platform/single-screen/cosa-serve/cosa-serve.component';
 import { CanvasBaseComponent } from './components/blog/platform/single-screen/canvas-base/canvas-base.component';
+import { InizializzazioneComponent } from './components/blog/platform/single-screen/inizializzazione/inizializzazione.component';
 
 import { from } from 'rxjs';
 
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'platform/canvas',
     component: CanvasBaseComponent
+  },
+  {
+    path: 'platform/inizializziamo',
+    component: InizializzazioneComponent
   }
 
 ];
