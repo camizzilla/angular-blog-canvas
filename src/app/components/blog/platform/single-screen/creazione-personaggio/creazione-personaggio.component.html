@@ -1,0 +1,106 @@
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Platform game: inizializziamo
+      </h1>
+      <h2 class="subtitle">
+        Prepariamo il canvas con tutti metodi che ci servono
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="column is-8 is-offset-2">
+      <div class="content is-medium">
+        <p> Come promesso nel capitolo precedente Iniziamo anzi inizializiamo dove abbiamo settato il nostro canvas e
+          provato qualche metodo legato a 2d, creeremo concretamente il nostro platform.</p>
+
+        <section class="paragraph">
+          <h2>[]</h2>
+
+          <p>Quindi creiamo il nostro protagonista, per adesso sarà un rettangolo, ma niente paura, più avanti lo
+            sostituiremo con degli sprite, che non è la bibita gassata, ma delle immagini in movimento.</p>
+          <pre><code [highlight]="varCode"></code></pre>
+
+          <p>Abbiamo salvato le proprietà del rettangolo in delle variabili così da avere una maggiore leggibilità e
+            riusabilità del codice. Altezza, larghezza, posizione iniziale sull’asse delle x e posizione iniziale
+            sull’asse delle y. Quest’ultima l’abbiamo posizionata a filo della parte inferiore del canvas. Le x e le y
+            degli oggetti vengono posizionati dal loro punto di origine, il vertice in alto a sinistra. Quindi se
+            proviamo a posizionarlo assegnandogli solo la fine del canvas il rettangolo sarebbe sparito sotto, mentre
+            sottraendo l’altezza il rettangolo rimane perfettamente a filo. </p>
+          <p>Nella fig1 e fig2 si capisce meglio la differenza.</p>
+          <img src="" alt="">
+          <img src="" alt="">
+
+          <pre><code [highlight]="fillRectCode"></code></pre>
+          <p>Disegnamo sul canvas con il metodo fillRect, che abbiamo visto nel precedente articolo Iniziamo anzi
+            Inizializziamo e gli passiamo come parametri le variabili create pocanzi.</p>
+          <canvas></canvas>
+        </section>
+        <br>
+        <section class="paragraph">
+          <h2>[move]</h2>
+          <p>Passiamo a muovere la nostra creatura, per fare questo dobbiamo ad ogni spostamento ridisegnare il
+            rettangolo aumentando o diminuendo il valore della x se vogliamo farlo muove in orizzontale, il valore della
+            y se vogliamo farlo muovere in verticale ed entrambi se vogliamo che si muova in diagonale.</p>
+          <p>Per fare ciò abbiamo bisogno un loop temporale che non è altro che un ciclo che ripete delle istruzioni con
+            un intervallo di tempo.</p>
+          <p>Il canvas ha un suo metodo specifico per gestire questo ciclo, molto più efficiente e performante, il
+            requestAnimationFrame(funzione). </p>
+          <p>Vediamolo subito all’opera.</p>
+          <pre><code [highlight]="loopCode"></code></pre>
+          <p>La funzione nominata loop sarà il cuore di tutto, dove metteremo tutte le azioni che il gioco dovrà
+            compiere e grazie al requestAnimationFrame richiamando la funzione “loop” creerà così un ciclo infinito.
+            Il requestAnimationFrame in fondo è l’istruzione che fa da “starter” che farà partire il gioco chiamando la
+            funzione principale.
+          </p>
+          <p>Come abbiamo accennato precedentemente per muovere il protagonista dobbiamo ad ogni ciclo fagli fare un
+            passettino nella direzione desiderata, quindi lo sposteremo verso l’asse delle x a destra di 5px.
+          </p>
+          <pre><code [highlight]="loopCode"></code></pre>
+          <p>Con l’operatore =+ aumentiamo di 5, il valore della variabile step, alla x del giocatore, spostandolo ad
+            ogni ciclo di 5px;</p>
+          <canvas></canvas>
+          <p>Ma che succede? Invece di spostarsi il rettangolo lo allunga!
+            Questo perché ad ogni ad ogni ciclo il canvas ridisegna tutti gli oggetti presenti. Quindi il nostro
+            rettangolo non viene spostato di 5px, ma ridisegnato ogni 5px, moltiplicandosi.
+            Per sopperire a questo e dare l’effetto di movimento dobbiamo fare un refresh all’inizio di ogni inizio
+            ciclo, ripulendo il canvas.
+          </p>
+          <pre><code [highlight]="clearRectCode"></code></pre>
+          <p>Con il metodo clearRect( x, y, width, height ), molto simile a fillRect, ma in questo caso cancelli un
+            porzione rettangolare. Per pulire tutto lo schermo questa porzione dovrà essere grande come il cavas e
+            partire dal punto di origine x: 0, y: 0.</p>
+          <canvas></canvas>
+        </section>
+        <br>
+        <section class="paragraph">
+          <h2>[move]</h2>
+          <p>Il nostro personaggio però deve restare all’interno del canvas, quindi bisogna fermarlo appena tocca i
+            bordi.</p>
+          <p>Quindi per non farlo uscire: </p>
+          <ul>
+            <li>dal lato sinistro la x del rettangolo deve essere maggiore di 0 (la x di origine del canvas)</li>
+            <li>dal lato destro la somma della x più la larghezza del rettangolo devono essere minori della larghezza
+              del canvas.</li>
+            <li>dal lato superiore la y del rettangolo deve essere maggiore di 0 (la y di origine del canvas)</li>
+            <li>dal lato destro la somma della y più la lunghezza del rettangolo devono essere minori della lunghezza
+              del canvas.</li>
+          </ul>
+          <img src="" alt="">
+          <pre><code [highlight]="borderCode"></code></pre>
+          <p>Traduciamo il tutto in codice, SE la x è maggiore di 0 E la x meno la larghezza del rettangolo è minore
+            della larghezza del canvas E la y è maggiore di 0 E la y meno la lunghezza del rettangolo è minore della
+            lunghezza del canvas ALLORA fallo muovere.</p>
+          <p>Nel prossimo capitolo ne parleremo più approfonditamente, perchè non solo faremo muovere il nostro
+            protagonista ma, saremo noi a comandarlo.</p>
+        </section>
+      </div>
+    </div>
+    <!-- column is-8 is-offset-2 -->
+  </div>
+  <!-- container -->
+</section>
+<!-- section -->

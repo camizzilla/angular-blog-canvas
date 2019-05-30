@@ -9,6 +9,7 @@ import { IntroComponent } from './components/blog/platform/single-screen/intro/i
 import { CosaServeComponent } from './components/blog/platform/single-screen/cosa-serve/cosa-serve.component';
 import { CanvasBaseComponent } from './components/blog/platform/single-screen/canvas-base/canvas-base.component';
 import { InizializzazioneComponent } from './components/blog/platform/single-screen/inizializzazione/inizializzazione.component';
+import { CreazionePersonaggioComponent } from './components/blog/platform/single-screen/creazione-personaggio/creazione-personaggio.component';
 
 import { from } from 'rxjs';
 
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'platform/inizializziamo',
     component: InizializzazioneComponent
+  },
+  {
+    path: 'platform/creazione-personaggio',
+    component: CreazionePersonaggioComponent
   }
 
 ];

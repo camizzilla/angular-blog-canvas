@@ -23,6 +23,7 @@ import { PlatformComponent } from './components/blog/platform/platform.component
 import { CosaServeComponent } from './components/blog/platform/single-screen/cosa-serve/cosa-serve.component';
 import { CanvasBaseComponent } from './components/blog/platform/single-screen/canvas-base/canvas-base.component';
 import { InizializzazioneComponent } from './components/blog/platform/single-screen/inizializzazione/inizializzazione.component';
+import { CreazionePersonaggioComponent } from './components/blog/platform/single-screen/creazione-personaggio/creazione-personaggio.component';
 
 /** 
  * Import every language you wish to highlight here
@@ -49,7 +50,8 @@ export function hljsLanguages() {
     PlatformComponent,
     CosaServeComponent,
     CanvasBaseComponent,
-    InizializzazioneComponent
+    InizializzazioneComponent,
+    CreazionePersonaggioComponent
   ],
   imports: [
     BrowserModule,
