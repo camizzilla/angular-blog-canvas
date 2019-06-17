@@ -19,7 +19,8 @@
         <section class="paragraph">
           <h2>[paragrafo]</h2>
 
-          <p>Apriamo il file main.js che abbiamo creato nell’articolo precedente [nome dell’articolo] e iniziamo a
+          <p>Apriamo il file main.js che abbiamo creato nell’articolo precedente <span><a
+                routerLink="platform/cosa-serve">Cosa serve</a></span> e iniziamo a
             scrivere il nostro codice.</p>
           <pre><code [highlight]="mainCode"></code></pre>
 
@@ -42,7 +43,7 @@
         </section>
         <br>
         <section class="paragraph">
-          <h2>[paragrafo]</h2>
+          <h2>inizializziamo</h2>
           <p>Iniziamo a prendere confidenza con alcuni metodi del context creando una rudimentale presentazione.</p>
           <pre><code [highlight]="canvasFillCode"></code></pre>
           <p>fillRect(x, y, larghezza, altezza) è il metodo per disegnare un rettangolo, i primi due parametri sono il
@@ -54,11 +55,28 @@
             Le proprietà che danno lo stile vanno sempre sopra l’oggetto, come nell’inglese che gli aggettivi vanno
             prima del nome.
           </p>
-          <canvas></canvas>
+          <div class="columns is-centered ">
+            <canvas #canvasFillrect></canvas>
+          </div>
+          <p>Come passo successivo, scriviamo il titolo del gioco bello grosso in mezzo al canvas.</p>
+          <pre><code [highlight]="canvasTextCode"></code></pre>
+          <p>fillText( testo, x, y) è il metodo per stampare a video un testo, come primo parametro gli passiamo un
+            testo, mentre gli altri due parametri sono le coordinate x e y dove andrà posizionata la scritta, nel nostro
+            caso nel centro esatto del canvas.
+            Come coordinate avremmo potuto scrivere 300 per la x e 200 per la y, ma è sempre meglio usare delle
+            variabili, così se decidessimo di cambiare le dimensioni del canvas la scritta si adatterebbe
+            automaticamente.
+          </p>
+          <p>Come per il rettangolo anche alla nostra scritta abbiamo dato degli stili, con font settiamo la grandezza e
+            il tipo di font, con fillStyle, come visto in precedenza, il colore, mentre con textAlign il posizionamento.
+          </p>
+          <div class="columns is-centered ">
+            <canvas #canvasIntro></canvas>
+          </div>
+
           <p>Visto che la nostra introduzione è un po’ spoglia, come compito a casa, dovrete creare un bottone. Non
             preoccupatevi, per adesso dovrà essere statico, ma lo andremo ad attivare nell’articolo [nome del articolo]
             sotto il nome. Questo è il mio...aspetto il tuo!</p>
-          <canvas></canvas>
           <p>Abbiamo visto solo alcuni dei metodi e delle proprietà del context 2d, se vuoi approfondire l’argomento ti
             rimando alla pagina della 3wschools: HTML canvas reference,
             se invece fremi dalla voglia di programmare il tuo gioco, visto che abbiamo preparato il nostro canvas
