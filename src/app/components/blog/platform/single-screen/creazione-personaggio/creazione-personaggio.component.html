@@ -20,8 +20,9 @@
         <section class="paragraph">
           <h2>[]</h2>
 
-          <p>Quindi creiamo il nostro protagonista, per adesso sarà un rettangolo, ma niente paura, più avanti lo
-            sostituiremo con degli sprite, che non è la bibita gassata, ma delle immagini in movimento.</p>
+          <p>QAndiamo a creare il nostro protagonista, che per adesso sarà un rettangolo, ma niente paura, più avanti lo
+            sostituiremo con degli sprite, che non è la bibita gassata, ma delle immagini in movimento, che riprodotte
+            in maniera sequenziale daranno l’idea di movimento.</p>
           <pre><code [highlight]="varCode"></code></pre>
 
           <p>Abbiamo salvato le proprietà del rettangolo in delle variabili così da avere una maggiore leggibilità e
@@ -37,7 +38,7 @@
           <pre><code [highlight]="fillRectCode"></code></pre>
           <p>Disegnamo sul canvas con il metodo fillRect, che abbiamo visto nel precedente articolo Iniziamo anzi
             Inizializziamo e gli passiamo come parametri le variabili create pocanzi.</p>
-          <canvas></canvas>
+          <canvas #canvasLoop></canvas>
         </section>
         <br>
         <section class="paragraph">
