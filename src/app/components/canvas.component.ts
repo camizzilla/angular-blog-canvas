@@ -4,8 +4,10 @@ import { Square } from '../canvas/square'
 @Component({
     selector: 'app-canvas',
     template: `
-    <canvas #canvas width="600" height="300"></canvas>
-    <button (click)="play()">Play</button>   
+    <div class="has-text-centered">
+        <canvas #canvas  width="600" height="300"></canvas>
+        <button class="button is-primary is-fullwidth" (click)="play()">Play</button>   
+    </div>
   `,
     styles: ['canvas { border-style: solid }']
 })

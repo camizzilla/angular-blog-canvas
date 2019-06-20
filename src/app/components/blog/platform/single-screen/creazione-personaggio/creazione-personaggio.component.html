@@ -12,7 +12,6 @@
 </section>
 <section class="section">
   <div class="container">
-    <app-canvas></app-canvas>
     <div class="column is-8 is-offset-2">
       <div class="content is-medium">
         <p> Come promesso nel capitolo precedente Iniziamo anzi inizializiamo dove abbiamo settato il nostro canvas e
@@ -72,6 +71,8 @@
           <p>Con l’operatore =+ aumentiamo di 5, il valore della variabile step, alla x del giocatore, spostandolo ad
             ogni ciclo di 5px;</p>
           <canvas #canvasMove></canvas>
+          <app-canvas></app-canvas>
+
           <p>Ma che succede? Invece di spostarsi il rettangolo lo allunga!
             Questo perché ad ogni ad ogni ciclo il canvas ridisegna tutti gli oggetti presenti. Quindi il nostro
             rettangolo non viene spostato di 5px, ma ridisegnato ogni 5px, moltiplicandosi.
