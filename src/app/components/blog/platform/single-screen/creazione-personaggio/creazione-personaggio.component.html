@@ -12,6 +12,7 @@
 </section>
 <section class="section">
   <div class="container">
+    <app-canvas></app-canvas>
     <div class="column is-8 is-offset-2">
       <div class="content is-medium">
         <p> Come promesso nel capitolo precedente Iniziamo anzi inizializiamo dove abbiamo settato il nostro canvas e
@@ -20,7 +21,8 @@
         <section class="paragraph">
           <h2>[]</h2>
 
-          <p>QAndiamo a creare il nostro protagonista, che per adesso sarà un rettangolo, ma niente paura, più avanti lo
+          <p>QAndiamo a creare il nostro protagonista, che per adesso sarà un rettangolo, ma niente paura, più avanti
+            lo
             sostituiremo con degli sprite, che non è la bibita gassata, ma delle immagini in movimento, che riprodotte
             in maniera sequenziale daranno l’idea di movimento.</p>
           <pre><code [highlight]="varCode"></code></pre>
@@ -32,9 +34,12 @@
             proviamo a posizionarlo assegnandogli solo la fine del canvas il rettangolo sarebbe sparito sotto, mentre
             sottraendo l’altezza il rettangolo rimane perfettamente a filo. </p>
           <p>Nella fig1 e fig2 si capisce meglio la differenza.</p>
-          <img src="" alt="">
-          <img src="" alt="">
-
+          <figure class="image">
+            <img src="https://i.ibb.co/7bsFGcz/canvas-Rect-Up.jpg" alt="">
+            <figcaption class="is-size-6">fig1</figcaption>
+            <img src="https://i.ibb.co/vkXF9vC/canvas-Rect-Down.jpg" alt="">
+            <figcaption class="is-size-6">fig2</figcaption>
+          </figure>
           <pre><code [highlight]="fillRectCode"></code></pre>
           <p>Disegnamo sul canvas con il metodo fillRect, che abbiamo visto nel precedente articolo Iniziamo anzi
             Inizializziamo e gli passiamo come parametri le variabili create pocanzi.</p>
@@ -44,9 +49,11 @@
         <section class="paragraph">
           <h2>[move]</h2>
           <p>Passiamo a muovere la nostra creatura, per fare questo dobbiamo ad ogni spostamento ridisegnare il
-            rettangolo aumentando o diminuendo il valore della x se vogliamo farlo muove in orizzontale, il valore della
+            rettangolo aumentando o diminuendo il valore della x se vogliamo farlo muove in orizzontale, il valore
+            della
             y se vogliamo farlo muovere in verticale ed entrambi se vogliamo che si muova in diagonale.</p>
-          <p>Per fare ciò abbiamo bisogno un loop temporale che non è altro che un ciclo che ripete delle istruzioni con
+          <p>Per fare ciò abbiamo bisogno un loop temporale che non è altro che un ciclo che ripete delle istruzioni
+            con
             un intervallo di tempo.</p>
           <p>Il canvas ha un suo metodo specifico per gestire questo ciclo, molto più efficiente e performante, il
             requestAnimationFrame(funzione). </p>
@@ -54,16 +61,17 @@
           <pre><code [highlight]="loopCode"></code></pre>
           <p>La funzione nominata loop sarà il cuore di tutto, dove metteremo tutte le azioni che il gioco dovrà
             compiere e grazie al requestAnimationFrame richiamando la funzione “loop” creerà così un ciclo infinito.
-            Il requestAnimationFrame in fondo è l’istruzione che fa da “starter” che farà partire il gioco chiamando la
+            Il requestAnimationFrame in fondo è l’istruzione che fa da “starter” che farà partire il gioco chiamando
+            la
             funzione principale.
           </p>
           <p>Come abbiamo accennato precedentemente per muovere il protagonista dobbiamo ad ogni ciclo fagli fare un
             passettino nella direzione desiderata, quindi lo sposteremo verso l’asse delle x a destra di 5px.
           </p>
-          <pre><code [highlight]="loopCode"></code></pre>
+          <pre><code [highlight]="loopMoveTxt"></code></pre>
           <p>Con l’operatore =+ aumentiamo di 5, il valore della variabile step, alla x del giocatore, spostandolo ad
             ogni ciclo di 5px;</p>
-          <canvas></canvas>
+          <canvas #canvasMove></canvas>
           <p>Ma che succede? Invece di spostarsi il rettangolo lo allunga!
             Questo perché ad ogni ad ogni ciclo il canvas ridisegna tutti gli oggetti presenti. Quindi il nostro
             rettangolo non viene spostato di 5px, ma ridisegnato ogni 5px, moltiplicandosi.

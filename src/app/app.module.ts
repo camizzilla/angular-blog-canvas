@@ -25,6 +25,8 @@ import { CanvasBaseComponent } from './components/blog/platform/single-screen/ca
 import { InizializzazioneComponent } from './components/blog/platform/single-screen/inizializzazione/inizializzazione.component';
 import { CreazionePersonaggioComponent } from './components/blog/platform/single-screen/creazione-personaggio/creazione-personaggio.component';
 
+import { AppCanvasComponent } from './components/canvas.component';
+
 /** 
  * Import every language you wish to highlight here
  * NOTE: The name of each language must match the file name its imported from
@@ -51,7 +53,8 @@ export function hljsLanguages() {
     CosaServeComponent,
     CanvasBaseComponent,
     InizializzazioneComponent,
-    CreazionePersonaggioComponent
+    CreazionePersonaggioComponent,
+    AppCanvasComponent
   ],
   imports: [
     BrowserModule,
