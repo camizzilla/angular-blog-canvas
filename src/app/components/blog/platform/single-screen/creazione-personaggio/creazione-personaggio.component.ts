@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { MoveRect } from '../../../../../canvas/moveRect';
+import { MoveRectNoClear } from '../../../../../canvas/moveRectNoClear';
 @Component({
   selector: 'app-creazione-personaggio',
   templateUrl: './creazione-personaggio.component.html',
   styleUrls: ['./creazione-personaggio.component.scss']
 })
 export class CreazionePersonaggioComponent {
+  public moveRect = MoveRect;
+  public moveRectNoClear = MoveRectNoClear;
+
 
   constructor() { }
 

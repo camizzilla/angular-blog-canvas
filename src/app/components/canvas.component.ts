@@ -1,17 +1,21 @@
-import { Component, ViewChild, ElementRef, OnInit, NgZone } from '@angular/core';
-import { Square } from '../canvas/square'
+import { Component, ViewChild, ElementRef, OnInit, Input } from '@angular/core';
+// import { Square } from '../canvas/square'
 
 @Component({
     selector: 'app-canvas',
     template: `
     <div class="has-text-centered">
         <canvas #canvas  width="600" height="300"></canvas>
-        <button class="button is-primary is-fullwidth" (click)="play()">Play</button>   
+        <button class="button is-primary is-fullwidth" *ngIf="addBtn" (click)="play()">Play</button>   
     </div>
   `,
     styles: ['canvas { border-style: solid }']
 })
 export class AppCanvasComponent implements OnInit {
+    @Input() public classCanvas;
+    @Input() public addBtn;
+
+
     @ViewChild('canvas') canvas: ElementRef<HTMLCanvasElement>;
     ctx: CanvasRenderingContext2D;
     canvasWidth: number;
@@ -19,14 +23,14 @@ export class AppCanvasComponent implements OnInit {
     raf = 0;
     stopAnimation: boolean = false;
     // squares: Square[] = [];
-    square: Square;
+    square;
 
     constructor() { }
 
     ngOnInit() {
         this.ctx = this.canvas.nativeElement.getContext('2d');
-        this.canvasWidth = this.canvas.nativeElement.width;
-        this.canvasHeight = this.canvas.nativeElement.height;
+        this.square = new this.classCanvas(this.ctx);
+        console.log(this.addBtn);
     }
 
     start() {
@@ -42,13 +46,12 @@ export class AppCanvasComponent implements OnInit {
             this.stopAnimation = false;
             return;
         }
-        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
-        this.square.moveRight();
+        this.square.start();
         window.requestAnimationFrame(() => this.loop());
     }
 
     play() {
-        this.square = new Square(this.ctx);
+        this.square = new this.classCanvas(this.ctx);
         // this.square.reset();
         this.start();
     }

@@ -42,7 +42,7 @@
           <pre><code [highlight]="fillRectCode"></code></pre>
           <p>Disegnamo sul canvas con il metodo fillRect, che abbiamo visto nel precedente articolo Iniziamo anzi
             Inizializziamo e gli passiamo come parametri le variabili create pocanzi.</p>
-          <canvas #canvasLoop></canvas>
+          <app-canvas [classCanvas]="moveRectNoClear" [addBtn]="false"></app-canvas>
         </section>
         <br>
         <section class="paragraph">
@@ -70,8 +70,7 @@
           <pre><code [highlight]="loopMoveTxt"></code></pre>
           <p>Con l’operatore =+ aumentiamo di 5, il valore della variabile step, alla x del giocatore, spostandolo ad
             ogni ciclo di 5px;</p>
-          <canvas #canvasMove></canvas>
-          <app-canvas></app-canvas>
+          <app-canvas [classCanvas]="moveRectNoClear" [addBtn]="true"></app-canvas>
 
           <p>Ma che succede? Invece di spostarsi il rettangolo lo allunga!
             Questo perché ad ogni ad ogni ciclo il canvas ridisegna tutti gli oggetti presenti. Quindi il nostro
@@ -83,7 +82,7 @@
           <p>Con il metodo clearRect( x, y, width, height ), molto simile a fillRect, ma in questo caso cancelli un
             porzione rettangolare. Per pulire tutto lo schermo questa porzione dovrà essere grande come il cavas e
             partire dal punto di origine x: 0, y: 0.</p>
-          <canvas></canvas>
+          <app-canvas [classCanvas]="moveRect" [addBtn]="true"></app-canvas>
         </section>
         <br>
         <section class="paragraph">
