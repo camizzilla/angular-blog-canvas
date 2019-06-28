@@ -26,6 +26,13 @@ import { InizializzazioneComponent } from './components/blog/platform/single-scr
 import { CreazionePersonaggioComponent } from './components/blog/platform/single-screen/creazione-personaggio/creazione-personaggio.component';
 
 import { AppCanvasComponent } from './components/canvas.component';
+import { NewsletterBlockComponent } from './components/pages/newsletter/newsletter-block.component';
+import { EndOnAllPageBlogComponent } from './components/blog/end-on-all-page-blog.component';
+import { WdgPrivacyPolicyComponent } from './components/widget/wdg-privacy-policy/wdg-privacy-policy.component';
+import { WdgContactsComponent } from './components/widget/wdg-contacts/wdg-contacts.component';
+import { WdgNavigationComponent } from './components/widget/wdg-navigation/wdg-navigation.component';
+import { WdgLastPostComponent } from './components/widget/wdg-last-post/wdg-last-post.component';
+import { WdgSocialComponent } from './components/widget/wdg-social/wdg-social.component';
 
 /** 
  * Import every language you wish to highlight here
@@ -54,7 +61,14 @@ export function hljsLanguages() {
     CanvasBaseComponent,
     InizializzazioneComponent,
     CreazionePersonaggioComponent,
-    AppCanvasComponent
+    AppCanvasComponent,
+    NewsletterBlockComponent,
+    EndOnAllPageBlogComponent,
+    WdgPrivacyPolicyComponent,
+    WdgContactsComponent,
+    WdgNavigationComponent,
+    WdgLastPostComponent,
+    WdgSocialComponent,
   ],
   imports: [
     BrowserModule,
