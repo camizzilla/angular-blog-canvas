@@ -17,22 +17,23 @@
         <p> Iniziamo inizializziando ( ma che gioco di parole vi ho tirato fuori? ) il canvas.</p>
 
         <section class="paragraph">
-          <h2>[paragrafo]</h2>
+          <h2>Gestione base del canvas</h2>
 
           <p>Apriamo il file main.js che abbiamo creato nell’articolo precedente <span><a
                 routerLink="platform/cosa-serve">Cosa serve</a></span> e iniziamo a
             scrivere il nostro codice.</p>
           <pre><code [highlight]="mainCode"></code></pre>
 
-          <p>Questo è il codice base che inizializza. Lo useremo quando avremo a che fare con il canvas. dettaglio.</p>
+          <p>Questo è la porzione di codice base che inizializza il canvas. Lo useremo per tutti i progetti che
+            utilizzano questa tecnologia, quindi molto spesso. 😉</p>
 
           <p>Abbiamo catturato l’elemento &lt;canvas&gt; grazie al comando javascript document.querySelector("#canvas");
             tramite il suo identificativo “#canvas” e lo abbiamo salvato nella variabile canvas.</p>
 
           <p>Abbiamo assegnato l’altezza e la larghezza al canvas grazie alle proprietà width e height.</p>
 
-          <p>Se il canvas è la tela, la variabile context è la nostra scatola degli attrezzi, dove custodiremo gli
-            strumenti per dipingere.</p>
+          <p>Se il canvas è la tela 🖼️, la variabile context è la nostra scatola degli attrezzi 🎨, dove custodiremo
+            gli strumenti per dipingere.</p>
 
           <p>Con il metodo getContext abbiamo specificato il contesto con il quale lavorare, nel nostro caso è il ‘2d’ e
             abbiamo preso quindi i giusti attrezzi per lavorare su una tela bidimensionale. </p>
@@ -55,9 +56,14 @@
             Le proprietà che danno lo stile vanno sempre sopra l’oggetto, come nell’inglese che gli aggettivi vanno
             prima del nome.
           </p>
-          <div class="columns is-centered ">
-            <canvas #canvasFillrect></canvas>
+          <br>
+          <div class="canvas-containter">
+            <div class="columns is-centered ">
+              <canvas #canvasFillrect></canvas>
+            </div>
+            <p class="is-7 has-text-centered is-italic">nano</p>
           </div>
+          <br>
           <p>Come passo successivo, scriviamo il titolo del gioco bello grosso in mezzo al canvas.</p>
           <pre><code [highlight]="canvasTextCode"></code></pre>
           <p>fillText( testo, x, y) è il metodo per stampare a video un testo, come primo parametro gli passiamo un
@@ -70,16 +76,26 @@
           <p>Come per il rettangolo anche alla nostra scritta abbiamo dato degli stili, con font settiamo la grandezza e
             il tipo di font, con fillStyle, come visto in precedenza, il colore, mentre con textAlign il posizionamento.
           </p>
-          <div class="columns is-centered ">
-            <canvas #canvasIntro></canvas>
+          <br>
+          <div class="canvas-containter">
+            <div class="columns is-centered ">
+              <canvas #canvasIntro></canvas>
+            </div>
+            <p class="is-7 has-text-centered is-italic">nano</p>
           </div>
+          <br>
 
           <p>Visto che la nostra introduzione è un po’ spoglia, come compito a casa, dovrete creare un bottone. Non
             preoccupatevi, per adesso dovrà essere statico, ma lo andremo ad attivare nell’articolo [nome del articolo]
             sotto il nome. Questo è il mio...aspetto il tuo!</p>
-          <div class="columns is-centered ">
-            <canvas #canvasIntroFinal></canvas>
+          <br>
+          <div class="canvas-containter">
+            <div class="columns is-centered ">
+              <canvas #canvasIntroFinal></canvas>
+            </div>
+            <p class="is-7 has-text-centered is-italic">nano</p>
           </div>
+          <br>
           <p>Abbiamo visto solo alcuni dei metodi e delle proprietà del context 2d, se vuoi approfondire l’argomento ti
             rimando alla pagina della 3wschools: HTML canvas reference,
             se invece fremi dalla voglia di programmare il tuo gioco, visto che abbiamo preparato il nostro canvas
