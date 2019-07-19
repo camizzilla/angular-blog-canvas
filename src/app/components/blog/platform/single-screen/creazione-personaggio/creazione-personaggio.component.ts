@@ -32,7 +32,8 @@ export class CreazionePersonaggioComponent {
       let loop = () => {
         context.fillRect(playerX, playerY, playerWidth, playerHeight);
         requestAnimationFrame(loop);
-      };`;
+      };
+      requestAnimationFrame(loop);`;
 
   loopMoveTxt = `
       let step = 5;

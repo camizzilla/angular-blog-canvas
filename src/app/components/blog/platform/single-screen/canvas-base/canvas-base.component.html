@@ -23,43 +23,47 @@
 
           <pre><code [highlight]="htmlCode"></code></pre>
 
-          <p>Creiamo il file index.html che ha una sua struttura base, l’unica novità è il tag &lt;canvas&gt; che è la
-            nostra
-            “tela digitale” dove andremo a dipingere il nostro capolavoro.</p>
+          <p>Creiamo il file <span class="is-italic">index.html</span> che ha una sua struttura base, l’unica novità è
+            il tag <span class="is-italic">&lt;canvas&gt;</span> che è
+            <span class="has-text-weight-bold">la
+              nostra “tela digitale” dove andremo a dipingere il nostro capolavoro.</span></p>
 
           <p>“Tela 🖼️? Ma cosa siamo pittori 👨‍🎨?” No, non sono impazzito, o per lo meno, non del tutto.</p>
 
-          <p>Ho parlato di tela digitale perché il canvas ( che in inglese significa Tela ) è un elemento html che ci
-            permetterà
-            di disegnare e gestire il nostro gioco interamente con Javascript.</p>
+          <p>Ho parlato di tela digitale perché il canvas ( che in inglese significa Tela ) è <span
+              class="has-text-weight-bold">un elemento html che ci
+              permetterà di disegnare e gestire il nostro gioco interamente con Javascript.</span></p>
           <figure class="image">
             <img src="https://i.ibb.co/s1b0mm0/canvas.jpg" alt="canvas : tela digitale">
             <figcaption class="is-size-6">Il canvas è una tela digitale</figcaption>
           </figure>
 
           <p>Il canvas è nato per sostituire una tecnologia, “Adobe Flash”, un programma di terze parti che serviva per
-            la
-            gestione di video e giochi vettoriali, aveva un notevole successo per le tante animazioni che conteneva al
-            suo
-            interno,ma, aveva seri problemi di sicurezza quindi si è deciso di rimpiazzarlo con un elemento html nativo.
+            la gestione di video e giochi vettoriali, aveva un notevole successo per le tante animazioni che conteneva
+            al
+            suo interno, ma, aveva seri problemi di sicurezza quindi si è deciso di rimpiazzarlo con <span
+              class="has-text-weight-bold">un elemento html nativo.</span>
           </p>
 
-          <p>Dopo questa postilla, torniamo a noi, dunque quello che vedete nel file Index è tutto l’html che ci serve
-            per il
-            nostro progetto: un tag &lt;canvas&gt; con identificativo ( Id ) per catturarlo con javascript. con tanta
-            fantasia, lo
-            chiameremo “myCanvas”.</p>
+          <p>Dopo questa postilla, torniamo a noi, dunque quello che vedete nel file Index è <span
+              class="has-text-weight-bold">tutto l’html che ci serve
+              per il
+              nostro progetto</span>: un tag <span class="is-italic">&lt;canvas&gt;</span> con identificativo ( Id ) per
+            catturarlo con javascript. con
+            tanta
+            fantasia, lo chiameremo <span class="is-italic">“myCanvas”</span>.</p>
         </section>
         <br>
         <section class="paragraph">
           <h2>CSS</h2>
-          <p>Dopo aver impostato la struttura del nostro progetto, dobbiamo dedicarci allo stile e per farlo, dobbiamo
-            creare un
-            file style.css</p>
+          <p>Dopo aver impostato la struttura del nostro progetto, dobbiamo <span class="has-text-weight-bold">dedicarci
+              allo stile</span> e per farlo, dobbiamo
+            creare un file <span class="is-italic">style.css</span></p>
           <pre><code [highlight]="cssCode"></code></pre>
           <p>Nel body abbiamo aggiunto il modulo flaxbox, “display: flex;“ poi, abbiamo impostato il layout, mettendo il
             canvas al
-            centro ,”align-items: center;“e “justify-content: center;“ successivamente abbiamo dato un’altezza, una
+            centro ,<span class="is-italic">”align-items: center;“</span> e <span class="is-italic">“justify-content:
+              center;“</span> successivamente abbiamo dato un’altezza, una
             larghezza e
             uno spessore, diversamente , non si vedrebbe a video.</p>
           <p>E questo, è tutto ciò che ci serve per il caso.</p>
@@ -70,28 +74,33 @@
           <p>Ultimo, ma non per ordine di importanza, è il file main.js che, creeremo ma per adesso lasceremo vuoto
           </p>
           <p>Se siete tipi curiosi 😏 e impazienti e volete controllare se funziona potete aggiungere il comando
-            “console.log (‘Ciao,
-            vengo letto correttamente’), il quale, visualizza una scritta sulla console se tutto è andato a buon fine.
+            <span class="is-italic"> console.log (‘Ciao,
+              vengo letto correttamente’)</span>, il quale, visualizza una scritta sulla console se tutto è andato a
+            buon
+            fine.
           </p>
         </section>
         <br>
         <section class="paragraph">
           <h2>COME FUNZIONA IL CANVAS?</h2>
           <p>Bella domanda, bravi! 👏</p>
-          <p>Analizziamo come funziona il canvas, così da capirlo e padroneggiarlo, visto che sarà un tassello
-            fondamentale per
-            quasi tutti i giochi che andremo a creare.</p>
-          <p>Dobbiamo immaginarci il canvas come una griglia di pixel che parte dal punto di origine O e si sviluppa
+          <p>Analizziamo come funziona il canvas, così da capirlo e padroneggiarlo, visto che sarà un <span
+              class="has-text-weight-bold">tassello
+              fondamentale per
+              quasi tutti i giochi che andremo a creare.</span></p>
+          <p>Dobbiamo immaginarci <span class="has-text-weight-bold">il canvas come una griglia di pixel</span> che
+            parte dal punto di origine O e si sviluppa
             sull’asse
             delle X in larghezza e sull’asse delle Y in lunghezza.</p>
           <figure class="image">
             <img src="https://i.ibb.co/74bB2x2/canvas-Grid.jpg" alt="griglia canvas">
             <figcaption class="is-size-6">Figura 1 - il canvas è formata da una griglia di pixel</figcaption>
           </figure>
-          <p>Grazie alle coordinate della nostra griglia possiamo creare “oggetti” e posizionarli nello spazio ( in
+          <p><span class="has-text-weight-bold">Grazie alle coordinate della nostra griglia possiamo creare “oggetti” e
+              posizionarli nello spazio</span> ( in
             seguito ci serviranno anche per spostarli).</p>
-          <p>Nell’esempio ( figura 2 ) ho posizionato un quadrato di 40X40 pixel nelle coordinate x: 50 e y:40
-            rispetto al punto di origine 0 che ha coordinate x: 0, y:0.</p>
+          <p>Nell’esempio ( figura 2 ) ho posizionato un quadrato di 40X40 pixel nelle coordinate x:50 e y:40
+            rispetto al punto di origine 0 che ha coordinate x:0, y:0.</p>
           <figure class="image">
             <img src="https://i.ibb.co/dLqYjj8/canvas-Position.jpg" alt="canvas">
             <figcaption class="is-size-6">Figura 2 - Il quadrato è alle coordinate x: 50px e y: 40px</figcaption>
@@ -104,19 +113,24 @@
 
           <h3>Pro</h3>
           <ul>
-            <li>Le animazioni 🎞️ sono molte più veloci e fluide, specialmente quando ci sono tanti elementi.</li>
-            <li>Controllo totale su tutti gli elementi grazie al javascript.</li>
-            <li>Gestione della memoria ottimizzata. Questo significa, notevole risparmio di memoria </li>
-            <li>Elevata gestione di calcolo 🧠.
+            <li><span class="has-text-weight-bold">Le animazioni</span> 🎞️ sono molte più <span
+                class="has-text-weight-bold">veloci e fluide</span>, specialmente quando ci sono tanti elementi.</li>
+            <li><span class="has-text-weight-bold">Controllo</span> totale su tutti gli elementi <span
+                class="has-text-weight-bold">grazie al javascript.</span></li>
+            <li><span class="has-text-weight-bold">Gestione della memoria ottimizzata.</span> Questo significa, notevole
+              risparmio di memoria </li>
+            <li><span class="has-text-weight-bold">Elevata gestione di calcolo 🧠.</span>
               Esempio: nei videogiochi dove ogni secondo ( il tempo dipende dal frame rate ) bisogna calcolare
               spostamenti, collisioni, input della tastiera o del mouse su svariati oggetti presenti nel canvas c’è
-              bisogno di una tecnologia in grado di gestire tutto ciò senza rallentamenti.
+              bisogno di una <span class="has-text-weight-bold">tecnologia in grado di gestire tutto ciò senza
+                rallentamenti</span>.
             </li>
           </ul>
           <h3>Contro</h3>
           <ul>
             <li>Complesso, che non vuol dire complicato, ma va certamente studiato e compreso! 😨 Che è quella faccia?
-              Niente paura...con le mie guide il canvas non avrà più segreti. <br>
+              Niente paura...<span class="has-text-weight-bold">con le mie guide il canvas non avrà più segreti.</span>
+              <br>
               Se nel vostro progetto dovete animare pochi elementi, magari al click del mouse o non avete bisogno di un
               refresh continuo, è inutile complicarsi la vita con il canvas, vi conviene gestirlo con il css. <br>
               Per capirci, prenderesti mai un pullman 🚌 50 posti per andare a fare la spesa 🛍️ nel market dietro
@@ -135,7 +149,8 @@
               routerLink="platform/inizializziamo">iniziamo, anzi inizializziamo</a>, dove
             inizieremo finalmente a programmare con javascript, che sarà il cuore di tutto il videogioco.
           </p>
-          <p>Quindi cosa aspettate?</p>
+          <p>Se non lo avete ancora fatto iscrivetevi alla newsletter.</p>
+          <p>Se invece siete già iscritti...cosa aspettate?</p>
           <p>
             👉 <a routerLink="/platform/inizializziamo"> Come creare un <strong>platform</strong> single
               Screen <i>Articolo 4</i></a> 👈

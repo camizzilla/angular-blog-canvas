@@ -14,94 +14,131 @@
   <div class="container">
     <div class="column is-8 is-offset-2">
       <div class="content is-medium">
-        <p> Iniziamo inizializziando ( ma che gioco di parole vi ho tirato fuori? ) il canvas.</p>
+        <p><span class="has-text-weight-bold">Iniziamo inizializziando</span> ( ma che gioco di parole vi ho tirato
+          fuori? ) <span class="has-text-weight-bold">il canvas.</span></p>
 
         <section class="paragraph">
           <h2>Gestione base del canvas</h2>
 
-          <p>Apriamo il file main.js che abbiamo creato nell’articolo precedente <span><a
+          <p>Apriamo il file <span class="is-italic">main.js</span> che abbiamo creato nell’articolo precedente <span><a
                 routerLink="platform/cosa-serve">Cosa serve</a></span> e iniziamo a
             scrivere il nostro codice.</p>
           <pre><code [highlight]="mainCode"></code></pre>
 
-          <p>Questo è la porzione di codice base che inizializza il canvas. Lo useremo per tutti i progetti che
-            utilizzano questa tecnologia, quindi molto spesso. 😉</p>
+          <p><span class="has-text-weight-bold">Questa è la porzione di codice</span> base che inizializza il canvas.
+            <span class="has-text-weight-bold">La useremo</span> per tutti i progetti che
+            utilizzano questa tecnologia, quindi<span class="has-text-weight-bold"> molto spesso.</span> 😉</p>
 
-          <p>Abbiamo catturato l’elemento &lt;canvas&gt; grazie al comando javascript document.querySelector("#canvas");
-            tramite il suo identificativo “#canvas” e lo abbiamo salvato nella variabile canvas.</p>
+          <p>Abbiamo catturato l’elemento <span class="is-italic">&lt;canvas&gt;</span> grazie al comando javascript
+            <span class="is-italic">document.querySelector("#canvas");</span>
+            tramite il suo identificativo <span class="is-italic">#canvas</span> e lo abbiamo salvato nella variabile
+            canvas.</p>
 
           <p>Abbiamo assegnato l’altezza e la larghezza al canvas grazie alle proprietà width e height.</p>
 
-          <p>Se il canvas è la tela 🖼️, la variabile context è la nostra scatola degli attrezzi 🎨, dove custodiremo
+          <p>Se il canvas è la tela 🖼️, <span class="has-text-weight-bold">la variabile context è la nostra scatola
+              degli attrezzi</span> 🎨, dove custodiremo
             gli strumenti per dipingere.</p>
 
-          <p>Con il metodo getContext abbiamo specificato il contesto con il quale lavorare, nel nostro caso è il ‘2d’ e
-            abbiamo preso quindi i giusti attrezzi per lavorare su una tela bidimensionale. </p>
+          <p>Con il metodo <span class="is-italic">getContext</span> abbiamo specificato il contesto con il quale
+            lavorare, nel nostro caso è il ‘2d’ e
+            abbiamo preso quindi <span class="has-text-weight-bold">i giusti attrezzi per lavorare su una tela
+              bidimensionale.</span> </p>
           <p>Se al posto del contesto “2d”, avessimo specificato “webgl”, ora lavoreremo con dei metodi per il “3d”.</p>
-          <p>Per capire meglio, potremmo paragonare il 2d alla pittura, dove nella variabile context, ho vari strumenti
-            per dipingere come i pennelli e la tavolozza. Mentre il webgl, potremmo paragonarlo alla scultura per la
-            quale servirebbero attrezzi diversi come, il martello e lo scalpello.</p>
+          <p>Per capire meglio, potremmo <span class="has-text-weight-bold">paragonare il 2d alla pittura</span> 🖌,
+            dove nella variabile context, ho vari
+            strumenti
+            per dipingere come i pennelli 🖌️ e la tavolozza 🎨. Mentre il <span class="has-text-weight-bold">webgl,
+              potremmo paragonarlo alla scultura</span> per
+            la
+            quale servirebbero attrezzi diversi come, il martello 🔨 e lo scalpello.</p>
         </section>
         <br>
         <section class="paragraph">
-          <h2>inizializziamo</h2>
-          <p>Iniziamo a prendere confidenza con alcuni metodi del context creando una rudimentale presentazione.</p>
+          <h2>Metodi Context</h2>
+          <p>Iniziamo a prendere confidenza con alcuni metodi del context <span class="has-text-weight-bold">creando una
+              rudimentale presentazione.</span></p>
           <pre><code [highlight]="canvasFillCode"></code></pre>
-          <p>fillRect(x, y, larghezza, altezza) è il metodo per disegnare un rettangolo, i primi due parametri sono il
+          <p><span class="is-italic">fillRect(x, y, larghezza, altezza)</span> è il metodo per disegnare un rettangolo,
+            i primi due parametri sono il
             punto di origine da dove si svilupperà, nel nostro caso partirà dopo 10px dal bordo laterale e superiore e
-            avrà una larghezza di 580px e una altezza di 380px, per lasciargli un bordo anche sugli altri lati. Se
+            avrà una larghezza di 580px e una altezza di 380px, per lasciargli un bordo anche sugli altri lati. <br> Se
             avessimo voluto un rettangolo grande come il canvas, gli avremmo passato come parametri x:0 y:0 (il punto di
             origine) e altezza e lunghezza come il canvas, quindi un 600x400.</p>
-          <p>fillStyle è la proprietà che da il colore, nel nostro caso un bellissimo arancione 🤢,
-            Le proprietà che danno lo stile vanno sempre sopra l’oggetto, come nell’inglese che gli aggettivi vanno
-            prima del nome.
+          <p><span class="is-italic">fillStyle</span> è la proprietà che da il colore, nel nostro caso un bellissimo
+            arancione 🤢,
+            <span class="has-text-weight-bold">Le proprietà che danno lo stile vanno sempre sopra l’oggetto, come
+              nell’inglese che gli aggettivi vanno
+              prima del nome.</span>
           </p>
           <br>
           <div class="canvas-containter">
             <div class="columns is-centered ">
               <canvas #canvasFillrect></canvas>
             </div>
-            <p class="is-7 has-text-centered is-italic">nano</p>
+            <p class="is-7 has-text-centered is-italic">fillRect è il metodo per disegnare dei rettangoni nel canvas</p>
           </div>
           <br>
-          <p>Come passo successivo, scriviamo il titolo del gioco bello grosso in mezzo al canvas.</p>
+          <p>Come passo successivo, <span class="has-text-weight-bold">scriviamo 🖋️ il titolo del gioco bello grosso in
+              mezzo al canvas.</span></p>
           <pre><code [highlight]="canvasTextCode"></code></pre>
-          <p>fillText( testo, x, y) è il metodo per stampare a video un testo, come primo parametro gli passiamo un
+          <p><span class="is-italic">fillText(testo, x, y)</span> è il metodo per stampare a video un testo, come primo
+            parametro gli passiamo un
             testo, mentre gli altri due parametri sono le coordinate x e y dove andrà posizionata la scritta, nel nostro
             caso nel centro esatto del canvas.
             Come coordinate avremmo potuto scrivere 300 per la x e 200 per la y, ma è sempre meglio usare delle
             variabili, così se decidessimo di cambiare le dimensioni del canvas la scritta si adatterebbe
             automaticamente.
           </p>
-          <p>Come per il rettangolo anche alla nostra scritta abbiamo dato degli stili, con font settiamo la grandezza e
-            il tipo di font, con fillStyle, come visto in precedenza, il colore, mentre con textAlign il posizionamento.
+          <p>Come per il rettangolo anche alla nostra scritta abbiamo dato degli stili, con <span
+              class="is-italic">font</span> settiamo la grandezza e
+            il tipo di font, con <span class="is-italic">fillStyle</span>, come visto in precedenza, il colore, mentre
+            con <span class="is-italic">textAlign</span> il posizionamento.
           </p>
           <br>
           <div class="canvas-containter">
             <div class="columns is-centered ">
               <canvas #canvasIntro></canvas>
             </div>
-            <p class="is-7 has-text-centered is-italic">nano</p>
+            <p class="is-7 has-text-centered is-italic">fillText è il metodo per scrivere sul canvas, seguito dai metodi
+              per gli stili</p>
           </div>
           <br>
 
-          <p>Visto che la nostra introduzione è un po’ spoglia, come compito a casa, dovrete creare un bottone. Non
-            preoccupatevi, per adesso dovrà essere statico, ma lo andremo ad attivare nell’articolo [nome del articolo]
-            sotto il nome. Questo è il mio...aspetto il tuo!</p>
+          <p>Visto che la nostra introduzione è un po’ spoglia, come compito a casa, dovrete creare un bottone 🔘. Non
+            preoccupatevi, per adesso dovrà essere statico, ma lo andremo ad attivare in un prossimo articolo. <br>
+            <span class="has-text-weight-bold">Questo è il mio...aspetto il tuo!</span></p>
           <br>
           <div class="canvas-containter">
             <div class="columns is-centered ">
               <canvas #canvasIntroFinal></canvas>
             </div>
-            <p class="is-7 has-text-centered is-italic">nano</p>
+            <p class="is-7 has-text-centered is-italic">La mia bellissma ✨ intro ✨</p>
           </div>
-          <br>
-          <p>Abbiamo visto solo alcuni dei metodi e delle proprietà del context 2d, se vuoi approfondire l’argomento ti
-            rimando alla pagina della 3wschools: HTML canvas reference,
-            se invece fremi dalla voglia di programmare il tuo gioco, visto che abbiamo preparato il nostro canvas
-            all’azione, ci vediamo al prossimo articolo…..[nome articolo]
+        </section>
+        <br><br>
+        <section class="paragraph">
+          <h2>Conclusione</h2>
+          <p>
+            In questo articolo abbiamo visto solo alcuni dei metodi e delle proprietà del context 2d,
+            se vuoi approfondire l’argomento ti rimando alla pagina della <a
+              href="https://www.w3schools.com/tags/ref_canvas.asp">3wschools: HTML canvas reference</a>.</p>
+          <p>Il canvas è pronto all'azione e fremi dalla voglia di <span class="has-text-weight-bold">creare il tuo
+              personaggio e di farlo muovere</span>,
+            ci vediamo al prossimo articolo…..<a routerLink="platform/creazione-personaggio"> Creazione
+              del personaggio</a>
+          </p>
+          <p>Se non lo avete ancora fatto iscrivetevi alla newsletter.</p>
+          <p>Se invece siete già iscritti...cosa aspettate?</p>
+          <p>
+            👉 <a routerLink="platform/creazione-personaggio"> Come creare un <strong>platform</strong> single
+              Screen <i>Articolo 5</i></a> 👈
           </p>
         </section>
+        <br>
+        <app-newsletter-block></app-newsletter-block>
+        <br>
+        <app-end-on-all-page-blog></app-end-on-all-page-blog>
         <br>
       </div>
     </div>

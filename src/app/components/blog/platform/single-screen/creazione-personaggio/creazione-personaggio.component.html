@@ -14,16 +14,19 @@
   <div class="container">
     <div class="column is-8 is-offset-2">
       <div class="content is-medium">
-        <p> Come promesso nel capitolo precedente Iniziamo anzi inizializiamo dove abbiamo settato il nostro canvas e
-          provato qualche metodo legato a 2d, creeremo concretamente il nostro platform.</p>
+        <p> Come promesso nel capitolo precedente <a routerLink="platform/inizializziamo">Iniziamo anzi
+            inizializiamo</a> dove abbiamo settato il nostro canvas e
+          provato qualche metodo legato a 2d, <span class="has-text-weight-bold">creeremo concretamente il nostro
+            platform.</span></p>
 
         <section class="paragraph">
-          <h2>[]</h2>
+          <h2>Creazione Protagonista</h2>
 
-          <p>QAndiamo a creare il nostro protagonista, che per adesso sarà un rettangolo, ma niente paura, più avanti
-            lo
-            sostituiremo con degli sprite, che non è la bibita gassata, ma delle immagini in movimento, che riprodotte
-            in maniera sequenziale daranno l’idea di movimento.</p>
+          <p>Andiamo a creare il nostro protagonista, che per adesso sarà un rettangolo ⬛, ma niente paura, più avanti
+            lo sostituiremo con degli <span class="has-text-weight-bold">sprite</span>, che non è la bibita gassata 🍾,
+            ma
+            delle <span class="has-text-weight-bold">immagini in movimento, che riprodotte
+              in maniera sequenziale daranno l’idea di movimento. 🚶‍🏃</span></p>
           <pre><code [highlight]="varCode"></code></pre>
 
           <p>Abbiamo salvato le proprietà del rettangolo in delle variabili così da avere una maggiore leggibilità e
@@ -34,36 +37,51 @@
             sottraendo l’altezza il rettangolo rimane perfettamente a filo. </p>
           <p>Nella fig1 e fig2 si capisce meglio la differenza.</p>
           <figure class="image">
-            <img src="https://i.ibb.co/7bsFGcz/canvas-Rect-Up.jpg" alt="">
-            <figcaption class="is-size-6">fig1</figcaption>
-            <img src="https://i.ibb.co/vkXF9vC/canvas-Rect-Down.jpg" alt="">
-            <figcaption class="is-size-6">fig2</figcaption>
+            <img src="https://i.ibb.co/vkXF9vC/canvas-Rect-Down.jpg" alt="la figura rimane sotto il canvas">
+            <figcaption class="is-size-6">fig1 Se non calcoliamo l'alterzza, la figura finisce sotto il canvas
+            </figcaption>
+            <br>
+            <img src="https://i.ibb.co/7bsFGcz/canvas-Rect-Up.jpg"
+              alt="la figura sottratta l'altezza si appoggia al canvas">
+            <figcaption class="is-size-6">fig2 La figura è appoggiata alla fine del canvas avendole sottratto l'altezza
+            </figcaption>
           </figure>
           <pre><code [highlight]="fillRectCode"></code></pre>
-          <p>Disegnamo sul canvas con il metodo fillRect, che abbiamo visto nel precedente articolo Iniziamo anzi
-            Inizializziamo e gli passiamo come parametri le variabili create pocanzi.</p>
-          <app-canvas [classCanvas]="moveRectNoClear" [addBtn]="false"></app-canvas>
+          <p>Disegnamo sul canvas con il metodo <span class="is-italic">fillRect</span>, che abbiamo visto nel
+            precedente articolo <a routerLink="platform/inizializziamo">Iniziamo anzi
+              Inizializziamo</a> e gli passiamo come parametri le variabili create pocanzi.</p>
+
+          <br>
+          <div class="canvas-containter">
+            <div class="columns is-centered ">
+              <app-canvas [classCanvas]="moveRectNoClear" [addBtn]="false"></app-canvas>
+            </div>
+            <p class="is-7 has-text-centered is-italic">Il "protagoista" disegnato sul canvas</p>
+          </div>
+
         </section>
         <br>
         <section class="paragraph">
-          <h2>[move]</h2>
-          <p>Passiamo a muovere la nostra creatura, per fare questo dobbiamo ad ogni spostamento ridisegnare il
+          <h2>Facciamolo muovere</h2>
+          <p>Passiamo a muovere la nostra creatura 👶, per fare questo dobbiamo ad ogni spostamento ridisegnare il
             rettangolo aumentando o diminuendo il valore della x se vogliamo farlo muove in orizzontale, il valore
-            della
-            y se vogliamo farlo muovere in verticale ed entrambi se vogliamo che si muova in diagonale.</p>
-          <p>Per fare ciò abbiamo bisogno un loop temporale che non è altro che un ciclo che ripete delle istruzioni
-            con
-            un intervallo di tempo.</p>
-          <p>Il canvas ha un suo metodo specifico per gestire questo ciclo, molto più efficiente e performante, il
-            requestAnimationFrame(funzione). </p>
-          <p>Vediamolo subito all’opera.</p>
+            della y se vogliamo farlo muovere in verticale ed entrambi se vogliamo che si muova in diagonale.</p>
+          <p>Per fare ciò abbiamo bisogno <span class="has-text-weight-bold">un loop temporale che non è altro che un
+              ciclo 🔄 che ripete delle istruzioni con un intervallo di tempo.</span></p>
+          <p><span class="has-text-weight-bold">Il canvas ha un suo metodo specifico per gestire questo ciclo</span>,
+            molto più efficiente e performante, il
+            <span class="is-italic">requestAnimationFrame(NomeDellafunzioneLoop)</span>. </p>
+          <p>Vediamolo subito all’opera 👀.</p>
           <pre><code [highlight]="loopCode"></code></pre>
-          <p>La funzione nominata loop sarà il cuore di tutto, dove metteremo tutte le azioni che il gioco dovrà
-            compiere e grazie al requestAnimationFrame richiamando la funzione “loop” creerà così un ciclo infinito.
-            Il requestAnimationFrame in fondo è l’istruzione che fa da “starter” che farà partire il gioco chiamando
-            la
-            funzione principale.
+          <p>La funzione nominata <span class="has-text-weight-bold"><span class="is-italic">loop()</span> sarà il cuore
+              di tutto</span>, dove metteremo tutte le azioni che il gioco dovrà
+            compiere e grazie al <span class="is-italic">requestAnimationFrame(loop)</span> richiamando <span
+              class="has-text-weight-bold">la funzione “loop”
+              creerà così un ciclo infinito.</span>
           </p>
+          <p>Il <span class="is-italic">requestAnimationFrame</span> in fondo al codice è l’istruzione che fa da
+            “starter” 🏁 che farà partire il gioco chiamando la funzione principale.</p>
+
           <p>Come abbiamo accennato precedentemente per muovere il protagonista dobbiamo ad ogni ciclo fagli fare un
             passettino nella direzione desiderata, quindi lo sposteremo verso l’asse delle x a destra di 5px.
           </p>
@@ -72,23 +90,24 @@
             ogni ciclo di 5px;</p>
           <app-canvas [classCanvas]="moveRectNoClear" [addBtn]="true"></app-canvas>
 
-          <p>Ma che succede? Invece di spostarsi il rettangolo lo allunga!
-            Questo perché ad ogni ad ogni ciclo il canvas ridisegna tutti gli oggetti presenti. Quindi il nostro
+          <p>Ma che succede? 🤔 Invece di spostarsi il rettangolo lo allunga!
+            Questo perché <span class="has-text-weight-bold">ad ogni ad ogni ciclo il canvas ridisegna tutti gli oggetti
+              presenti.</span> Quindi il nostro
             rettangolo non viene spostato di 5px, ma ridisegnato ogni 5px, moltiplicandosi.
             Per sopperire a questo e dare l’effetto di movimento dobbiamo fare un refresh all’inizio di ogni inizio
             ciclo, ripulendo il canvas.
           </p>
           <pre><code [highlight]="clearRectCode"></code></pre>
-          <p>Con il metodo clearRect( x, y, width, height ), molto simile a fillRect, ma in questo caso cancelli un
-            porzione rettangolare. Per pulire tutto lo schermo questa porzione dovrà essere grande come il cavas e
-            partire dal punto di origine x: 0, y: 0.</p>
+          <p>Con il metodo <span class="is-italic">clearRect( x, y, width, height )</span>, molto simile a fillRect, ma
+            in questo caso cancelli un porzione rettangolare. Per pulire tutto lo schermo questa porzione dovrà essere
+            grande come il cavas e partire dal punto di origine x: 0, y: 0.</p>
           <app-canvas [classCanvas]="moveRect" [addBtn]="true"></app-canvas>
         </section>
         <br>
         <section class="paragraph">
-          <h2>[move]</h2>
-          <p>Il nostro personaggio però deve restare all’interno del canvas, quindi bisogna fermarlo appena tocca i
-            bordi.</p>
+          <h2>Creiamo dei confini</h2>
+          <p>Il nostro personaggio però deve restare all’interno del canvas, quindi <span
+              class="has-text-weight-bold">bisogna fermarlo 🚫 appena tocca i bordi.</span></p>
           <p>Quindi per non farlo uscire: </p>
           <ul>
             <li>dal lato sinistro la x del rettangolo deve essere maggiore di 0 (la x di origine del canvas)</li>
@@ -103,9 +122,22 @@
           <p>Traduciamo il tutto in codice, SE la x è maggiore di 0 E la x meno la larghezza del rettangolo è minore
             della larghezza del canvas E la y è maggiore di 0 E la y meno la lunghezza del rettangolo è minore della
             lunghezza del canvas ALLORA fallo muovere.</p>
-          <p>Nel prossimo capitolo ne parleremo più approfonditamente, perchè non solo faremo muovere il nostro
-            protagonista ma, saremo noi a comandarlo.</p>
         </section>
+        <section class="paragraph">
+          <h2>Conclusione</h2>
+          <p>
+            In questo articolo abbiamo il nostro personaggio, che non sarà definitivo, visto che più avanti lo andreamo
+            a completare con delle immagini, e lo abbiamo fatto muovere all'interno del canvas</p>
+          <p><span class="has-text-weight-bold">Nel prossimo articolo prenderemo il controllo 🎮 del personaggio</span>,
+            muovendolo e facendolo saltare.</p>
+          <p>Se non lo avete ancora fatto <span class="has-text-weight-bold">iscrivetevi alla newsletter</span>, così da
+            assere avvisati appena arriva il prossimo
+            articolo</p>
+        </section>
+        <br>
+        <app-newsletter-block></app-newsletter-block>
+        <br>
+        <app-end-on-all-page-blog></app-end-on-all-page-blog>
       </div>
     </div>
     <!-- column is-8 is-offset-2 -->
