@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -74,6 +75,7 @@ export function hljsLanguages() {
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
     HighlightModule.forRoot({ languages: hljsLanguages })
   ],
   providers: [],

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailService } from '../../../service/email.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-newsletter',
@@ -8,10 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class NewsletterComponent implements OnInit {
 
+  public subscription: Subscription;
   newsletterForm: FormGroup;
   submitted: boolean = false;
 
-  constructor(fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private _emailService: EmailService) {
     this.newsletterForm = fb.group({
       name: ["",
         [
@@ -43,7 +46,19 @@ export class NewsletterComponent implements OnInit {
       return;
     }
 
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.newsletterForm.value))
+    console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.newsletterForm.value));
+    let user = {
+      name: this.newsletterForm.value.name,
+      email: this.newsletterForm.value.email
+    }
+    this.subscription = this._emailService.sendEmail(user).
+      subscribe(data => {
+        let msg = data['message']
+        alert(msg);
+        // console.log(data, "success");
+      }, error => {
+        console.error(error, "error");
+      });
   }
 
 }
