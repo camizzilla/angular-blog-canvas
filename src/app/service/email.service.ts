@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 // import 'rxjs/add/operator/map'
 
 @Injectable({
@@ -8,14 +8,15 @@ import { HttpClient } from '@angular/common/http';
 export class EmailService {
 
   constructor(private httpClient: HttpClient) { }
-
+  // public sendEmail(data) {
+  //   return this.httpClient.post('/backend/mail.php', data);
+  // }
   public sendEmail(data) {
-    return this.httpClient.post('http://localhost:3000/sendFormData', data);
-    //    {
+    return this.httpClient.post('/backend/mail.php', data, { responseType: 'text' });
+    // {
     //   headers: new HttpHeaders({
-    //        'Content-Type':  'application/json',
-    //      })
-    // }).map( data=>
-    //  data);
+    //     'Content-Type': 'application/json',
+    //   })
+    // });
   }
 }
